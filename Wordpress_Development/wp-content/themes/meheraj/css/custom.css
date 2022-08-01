@@ -1,0 +1,369 @@
+/* ===============================================
+   Variable Color
+================================================== */
+:root{
+    --primary: #e73b3b;
+    --secondary: #1b1d1f;
+}
+
+/* ===============================================
+   Basic Setup
+================================================== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Kaisei Decol', serif;
+    background-color: #ffffff;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Oswald', sans-serif;
+}
+img{
+    width: 100%;
+    max-width: 100%;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+ul,li{
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: blue;
+}
+/* ===============================================
+   Reuseable Component
+================================================== */
+.readmore{
+    display: inline-block;
+    padding: 6px 15px;
+    background-color: var(--primary);
+    color: #fff;
+    transition: all 0.4s;
+    margin-top: 15px;
+}
+.readmore:hover{
+    background-color: var(--secondary);
+    color: #fff;
+}
+
+/* ===============================================
+   Header Section
+================================================== */
+#menu_header{
+    padding: 5px 0;
+    box-shadow: 1px 0 10px rgba(0, 0, 0, .25);
+}
+
+#nav{
+    margin-top: 18px;
+    display: flex;
+    justify-content: end;
+}
+#nav li{
+    position: relative;
+}
+#nav li a{
+    padding: 10px 15px;
+    color: var(--secondary);
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+}
+#nav li a:hover{
+    background-color: var(--primary);
+    color: #fff;
+}
+
+#nav li ul{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--secondary);
+    color: #fff;
+    width: 200px;
+    display: none;
+    visibility: hidden;
+}
+#nav li:hover > ul{
+    display: block;
+    visibility: visible;
+}
+#nav li ul li a{
+    color: #fff;
+    padding: 10px 15px;
+    text-align: left;
+    position: relative;
+    border-bottom: 1px solid #aaa7a7;
+    display: block;
+}
+#nav li ul li a:hover{
+    background-color: var(--primary);
+    color: #fff;
+}
+
+#nav li ul li ul{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: var(--secondary);
+    color: #fff;
+    width: 200px;
+    display: none;
+    visibility: hidden;
+}
+#nav li ul li:hover > ul{
+    display: block;
+    visibility: visible;
+}
+
+/* Customize Menu Design */
+#menu_header.right_menu .col-md-3{
+    order: 2;
+}
+#menu_header.right_menu .col-md-9{
+    order: 1;
+}
+#menu_header.right_menu .col-md-9 #nav{
+    justify-content: start;
+}
+#menu_header.center_menu .col-md-3{
+    width: 100%;
+    text-align: center;
+    margin: 15px 0;
+}
+#menu_header.center_menu .col-md-3 img{
+    width: 200px;
+}
+#menu_header.center_menu .col-md-9{
+    width: 100%;
+}
+#menu_header.center_menu .col-md-9 #nav{
+    justify-content: center;
+    text-align: center;
+}
+
+/* ===============================================
+   Body Area
+================================================== */
+#body_area{
+    margin: 50px 0;
+}
+#body_area .blog_area{
+    padding: 15px;
+    border: 1px solid #d3d3d3;
+    border-radius: 8px;
+    margin: 15px 0;
+    width: 100%;
+    background-color: #f5f5f5;
+}
+#body_area .blog_area .post_thumb{
+    overflow: hidden;
+    width: 100%;
+    border-radius: 3px;
+}
+#body_area .blog_area .post_thumb a img{
+    transition: all 0.5s;
+}
+#body_area .blog_area .post_thumb a:hover img{
+    transform: scale(1.1);
+}
+#body_area .blog_area .post_details h2{
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 10px 0 0 0;
+}
+#body_area .blog_area .post_details h2 a{
+    color: var(--secondary);
+    text-decoration: none;
+}
+#body_area .blog_area .post_details h2:hover a{
+    color: var(--primary);
+}
+#body_area .blog_area .post_details div{
+    width: 100% !important;
+}
+#body_area .blog_area .post_details p.date{
+    display: inline-block;
+    margin-bottom: 8px;
+}
+#body_area .blog_area .post_details p.date span{
+    display: inline-block;
+    margin: 0 5px;
+}
+
+/* ===============================================
+   Footer Section
+================================================== */
+#copyright_section{
+    background-color: var(--secondary);
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+}
+#footer_content{
+    padding: 50px 0;
+    background-color: #24272a;
+    color: #fff;
+}
+/* ===============================================
+   Comments Aerea styling
+================================================== */
+#commetns_area #respond{
+    margin-top: 20px;
+}
+#commetns_area #reply-title{
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 10px 0;
+}
+#commetns_area input,
+#commetns_area textarea{
+    display: block;
+    width: 100%;
+    padding: 6px 10px;
+
+}
+#commetns_area input[type="checkbox"]{
+    display: inline;
+    width: auto;
+}
+#commetns_area p{
+    margin: 10px 0;
+}
+#commetns_area input[type="submit"]{
+    display: inline-block;
+    padding: 6px 15px;
+    background-color: var(--primary);
+    color: #fff;
+    transition: all 0.4s;
+    margin-top: 15px;
+    border: none;
+}
+/* ===============================================
+   Pagenation Aerea styling
+================================================== */
+#page_nav p.pages{
+    background-color: #e1e1e1 !important;
+    color: var(--secondary);
+    display: block;
+    padding: 3px 10px;
+    margin-bottom: 10px;
+}
+#page_nav p.pages span{
+    display: inline-block;
+    margin: 0 4px;
+}
+#page_nav a{
+    display: inline-block;
+    padding: 6px 15px;
+    background-color: var(--primary);
+    color: #fff;
+    transition: all 0.4s;
+}
+#page_nav a:hover{
+    background-color: var(--secondary);
+}
+#page_nav span.current{
+    display: inline-block;
+    padding: 6px 15px;
+    background-color: var(--secondary);
+    color: #fff;
+    transition: all 0.4s;
+} 
+/* ===============================================
+   Widgete Aerea styling
+================================================== */
+.wp-block-tag-cloud a{
+    background-color: var(--secondary);
+    padding: 4px 8px;
+    font-size: 15px !important;
+    font-weight: 500;
+    color: #FFf;
+    margin: 2px 0;
+}
+.child_sidebar .title{
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+.child_sidebar #menu-main-menu{
+    margin-left: 20px;
+}
+.child_sidebar #menu-main-menu li a{
+    color: #fff;
+}
+.child_sidebar .wp-block-social-links{
+    margin-top: 15px;
+}
+/* ===============================================
+   Archive Aerea styling
+================================================== */
+.archive_title,
+.search_title .title {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 8px 15px;
+    background-color: var(--secondary);
+    color: #fff;
+}
+/* ===============================================
+   Services Aerea styling
+================================================== */
+#service_area{
+    margin: 50px 0;
+}
+#service_area .card{
+    padding: 15px;
+    background-color: #d3d3d3;
+    border-radius: 8px;
+}
+#service_area .card .title{
+    font-size: 25px;
+    color: #1b1d1f;
+}
+/* ===============================================
+   404 Area
+================================================== */
+#error_area{
+    margin: 80px 0;
+}
+#error_area .btn{
+    display: inline-block;
+    padding: 8px 25px;
+    background-color: var(--primary);
+    color: #fff;
+    transition: all 0.4s;
+    margin-top: 15px;
+    border-radius: 0;
+    
+}
+#error_area .btn:hover{
+    background-color: var(--secondary);
+    color: #fff;
+}
+/* ===============================================
+   Page Template Design
+================================================== */
+
+#template_area .template_title {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 8px 15px;
+    background-color: var(--secondary);
+    color: #fff;
+    background-color: #1b1d1f;
+    margin: 100px 0;
+    text-align: center;
+}
